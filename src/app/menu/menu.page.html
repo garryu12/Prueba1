@@ -14,10 +14,8 @@
   </center>
   <br>
   <ion-card>
-    
-
     <ion-card-content>
-   {{mensaje}}
+   {{nombre}}
     </ion-card-content>
     <br>
   </ion-card>
@@ -25,7 +23,7 @@
   <ion-list>
     <ion-item>
       <ion-icon name="checkmark-done-outline" slot="start"></ion-icon>
-      <ion-label>Registrar Asistencia</ion-label>
+      <ion-button color="light" [routerLink]= "['/regristrar-asistencia']" (click)="goToRegistrar()">Registrar Asistencia</ion-button>
     </ion-item>
     <ion-item>
       <ion-icon name="bar-chart-outline" slot="start"></ion-icon>

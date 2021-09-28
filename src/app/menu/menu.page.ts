@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router,NavigationExtras } from '@angular/router';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.page.html',
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-  mensaje: any;
+  nombre: any;
   constructor(private route: ActivatedRoute,private router:Router) {
     this.route.queryParams.subscribe(params=>{
       console.log('params:',params)
-      if(params && params.mensaje){
-        this.mensaje = params.mensaje;
+      if(params && params.nombre){
+        this.nombre = params.nombre;
       }else{
-        this.mensaje = "Alumno"
+        this.nombre = "Alumno"
       }
     })
 
@@ -23,8 +23,8 @@ export class MenuPage implements OnInit {
     this.router.navigate(['/home'])
   }
 
-  goToEmisor(){
-    this.router.navigate(['/emisor'])
+  goToRegistrar(){
+    this.router.navigate(['/registrar-asistencia'])
   }
   ngOnInit() {
   }
