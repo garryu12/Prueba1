@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'registrar-asistencia',
     loadChildren: () => import('./registrar-asistencia/registrar-asistencia.module').then( m => m.RegistrarAsistenciaPageModule)
   },
+  {
+    path: 'porcentaje',
+    loadChildren: () => import('./porcentaje/porcentaje.module').then( m => m.PorcentajePageModule)
+  },
+  {
+    path: 'horario',
+    loadChildren: () => import('./horario/horario.module').then( m => m.HorarioPageModule)
+  },
 ];
 
 @NgModule({

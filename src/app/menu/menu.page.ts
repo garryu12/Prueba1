@@ -26,6 +26,12 @@ export class MenuPage implements OnInit {
   goToRegistrar(){
     this.router.navigate(['/registrar-asistencia'])
   }
+  goToPorcentaje(){
+    this.router.navigate(['/porcentaje'])
+  }
+  goToHorario(){
+    this.router.navigate(['/horario'])
+  }
   ngOnInit() {
   }
 
