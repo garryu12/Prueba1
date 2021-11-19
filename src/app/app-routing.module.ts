@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'horario',
     loadChildren: () => import('./horario/horario.module').then( m => m.HorarioPageModule)
   },
+  {
+    path: 'regristrar-alumno',
+    loadChildren: () => import('./regristrar-alumno/regristrar-alumno.module').then( m => m.RegristrarAlumnoPageModule)
+  },
 ];
 
 @NgModule({
