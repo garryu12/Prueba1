@@ -1,22 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router,NavigationExtras } from '@angular/router';
+import { ApiduocService } from '../apiduoc.service';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.page.html',
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-  nombre: any;
-  constructor(private route: ActivatedRoute,private router:Router) {
-    this.route.queryParams.subscribe(params=>{
-      console.log('params:',params)
-      if(params && params.nombre){
-        this.nombre = params.nombre;
-      }else{
-        this.nombre = "Alumno"
-      }
-    })
-
+  nombre_alumnno: any;
+  correo_alumno: any;
+  constructor(private route: ActivatedRoute,private router:Router, public api:ApiduocService) {
+    
   }
 
   goToHome(){

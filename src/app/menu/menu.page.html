@@ -15,7 +15,7 @@
   <br>
   <ion-card>
     <ion-card-content>
-   {{nombre}}
+   {{nombre_alumnno}}
     </ion-card-content>
     <br>
   </ion-card>
@@ -32,10 +32,6 @@
     <ion-item>
       <ion-icon name="calendar-outline" slot="start"></ion-icon>
       <ion-button color="light" [routerLink]= "['/horario']" (click)="goToHorario()">Horario</ion-button>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="ban-outline"></ion-icon> 
-      <ion-button color="light" [routerLink]= "['/home']" (click)="goToHome()">Eliminar Usuario</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>

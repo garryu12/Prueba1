@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { ApiduocService } from '../apiduoc.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,8 +9,10 @@ import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
+  public correo_alumno: any;
   public nombre:string;
-  constructor(private router: Router) {}
+  public password_alumno: any;
+  constructor(private router: Router, private http: HttpClient, public api:ApiduocService) {}
  
   goToReceptor(){
     let navigationExtras:NavigationExtras = {
@@ -24,6 +28,16 @@ export class HomePage implements OnInit {
   goToRecuperacion(){
     this.router.navigate(['/recuperacion'])
   }
+
+  iniciarSesion(){
+    this.api.getAlumno(this.correo_alumno,this.password_alumno).subscribe(success => {
+      this.router.navigate(['/menu'])
+      console.log(success)
+    })
+  }
+
+
+
   ngOnInit() {
   }
 }

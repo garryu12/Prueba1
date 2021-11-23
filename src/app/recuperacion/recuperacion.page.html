@@ -11,12 +11,23 @@
   <br>
 <br>
 <br>
+<ion-item>
+  <ion-label position="floating">Ingrese su usuario (correo)</ion-label>
+  <ion-input type="text" [(ngModel)]= "correo_alumno"></ion-input>
+  
+</ion-item>
+<br>
+
   <ion-item>
     <ion-label position="floating">Ingrese su nueva contraseña</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]= "password_alumno"></ion-input>
     
   </ion-item>
   <ion-item>
-    <ion-button color="light" [routerLink]= "['/home']" (click)="goToHome()">Restablecer contraseña</ion-button>
+    <ion-button color="light" [routerLink]= "['/home']" (click)="recuperarContrasena()">Restablecer contraseña</ion-button>
+  </ion-item>
+<br>
+  <ion-item>
+    <ion-button color="light" [routerLink]= "['/home']" (click)="eliminarCuenta()">Borrar Cuenta</ion-button>
   </ion-item>
 </ion-content>
