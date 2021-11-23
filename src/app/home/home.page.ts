@@ -21,6 +21,9 @@ export class HomePage implements OnInit {
   goToAlumno(){
     this.router.navigate(['/regristrar-alumno'])
   }
+  goToRecuperacion(){
+    this.router.navigate(['/recuperacion'])
+  }
   ngOnInit() {
   }
 }

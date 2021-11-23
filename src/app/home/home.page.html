@@ -12,13 +12,13 @@
       <ion-title size="large">RegistrAPP</ion-title>
     </ion-toolbar>
   </ion-header>
-    <div id="logo">
-      <img src= "assets/img/duoclogo.png">
-    </div>
+    
     
 
   <div id="container">
-    
+    <div id="logo">
+      <img src= "assets/img/duoclogo.png">
+    </div>
       <ion-item>
         <ion-label position="floating">Usuario</ion-label>
         <ion-input type="text" [(ngModel)]="nombre"></ion-input>
@@ -33,7 +33,13 @@
       <br>
       <br>
       <ion-button color="light" [routerLink]= "['/regristrar-alumno']" (click)="goToAlumno()">Registrar Alumno</ion-button>
-        
+      <br>
+      <br>
+      <center>
+        <ion-button color="light" [routerLink]= "['/recuperacion']" (click)="goToRecuperacion()">¿Olvidaste tu contraseña?</ion-button>
+    
+      </center>
+    
         
     
 

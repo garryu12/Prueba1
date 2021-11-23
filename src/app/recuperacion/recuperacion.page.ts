@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 @Component({
-  selector: 'app-regristrar-alumno',
-  templateUrl: './regristrar-alumno.page.html',
-  styleUrls: ['./regristrar-alumno.page.scss'],
+  selector: 'app-recuperacion',
+  templateUrl: './recuperacion.page.html',
+  styleUrls: ['./recuperacion.page.scss'],
 })
-export class RegristrarAlumnoPage implements OnInit {
+export class RecuperacionPage implements OnInit {
 
   public nombre:string;
   constructor(private router: Router) {}
@@ -15,6 +15,5 @@ export class RegristrarAlumnoPage implements OnInit {
   }
   ngOnInit() {
   }
-  
 
 }

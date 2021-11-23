@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'regristrar-alumno',
     loadChildren: () => import('./regristrar-alumno/regristrar-alumno.module').then( m => m.RegristrarAlumnoPageModule)
   },
+  {
+    path: 'recuperacion',
+    loadChildren: () => import('./recuperacion/recuperacion.module').then( m => m.RecuperacionPageModule)
+  },
 ];
 
 @NgModule({
